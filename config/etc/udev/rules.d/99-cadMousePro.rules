@@ -1,0 +1,1 @@
+KERNEL=="hidraw*", ATTRS{idVendor}=="256f", ATTRS{idProduct}=="c652", RUN+="/usr/local/bin/cadMousePro --frequency 250 --smart-scrolling false --lift-off-detection true"

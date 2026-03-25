@@ -1,0 +1,25 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!--
+	n.b. in current version, this is not a stable public API and might change in later versions;
+	now it server only as an internal interface between the daemon and the GUI application.
+	
+	generate C++ code from this XML:
+		d-bus/generate.sh adaptor
+		d-bus/generate.sh proxy
+-->
+<node name="/info/globalcode/mouse/cadMousePro">
+	<interface name="info.globalcode.mouse.cadMousePro">
+		
+		<property name="devicePresent" type="b" access="read"/>
+		<property name="deviceName" type="s" access="read"/>
+		
+		<method name="configure">
+			<arg name="liftOffDetection" type="b" direction="in"/>
+			<arg name="smartScrolling" type="b" direction="in"/>
+			<arg name="remapWheelPress" type="b" direction="in"/>
+			<arg name="remapGestureButton" type="b" direction="in"/>
+			<arg name="frequency" type="i" direction="in"/>
+		</method>
+		
+	</interface>
+</node>

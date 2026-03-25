@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright (c) 2014, 2016 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+
+Contributor(s):
+-->
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="build">
+        <df name="Debug">
+          <df name="src">
+            <df name="generated-sources">
+              <in>Proxy.cpp</in>
+              <in>UPowerDeviceProxy.cpp</in>
+              <in>UPowerProxy.cpp</in>
+            </df>
+          </df>
+        </df>
+        <df name="qt">
+          <df name="src">
+            <df name="cadMousePro-gui_autogen">
+              <in>mocs_compilation.cpp</in>
+            </df>
+            <df name="generated-sources">
+              <in>Proxy.cpp</in>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="src">
+        <in>MouseMainWindow.cpp</in>
+        <in>MouseMainWindow.h</in>
+        <in>cadMouseProGUI.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="cadMousePro-gui_autogen"
+                   displayName="cadMousePro-gui_autogen"
+                   projectFiles="true"
+                   root="build/Debug/src/cadMousePro-gui_autogen">
+      <logicalFolder name="EWIEGA46WW" displayName="EWIEGA46WW" projectFiles="true">
+        <itemPath>build/Debug/src/cadMousePro-gui_autogen/EWIEGA46WW/moc_MouseMainWindow.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="S5VNLJ26FI" displayName="S5VNLJ26FI" projectFiles="true">
+        <itemPath>build/Debug/src/cadMousePro-gui_autogen/S5VNLJ26FI/moc_Proxy.cpp</itemPath>
+        <itemPath>build/Debug/src/cadMousePro-gui_autogen/S5VNLJ26FI/moc_UPowerProxy.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>build/Debug/src/cadMousePro-gui_autogen/mocs_compilation.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="Modules"
+                   displayName="Modules"
+                   projectFiles="true"
+                   root="/usr/share/cmake-3.10/Modules">
+      <itemPath>/usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp</itemPath>
+      <itemPath>/usr/share/cmake-3.10/Modules/CMakeCompilerABI.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>build/Debug/Makefile</itemPath>
+      <itemPath>build/Release/Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject|build)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>build/Debug/Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-fsanitize=address -fPIC -std=gnu++11"/>
+        <element flagsID="1"
+                 commonFlags="-mtune=generic -march=x86-64 -std=gnu++11 -fsanitize=address -fPIC -fstack-protector-strong"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>build/Debug</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>build/Debug/src/cadMousePro-gui</executablePath>
+          <ccTool flags="0">
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>build/Debug</preBuildCommandWorkingDir>
+          <preBuildCommand>${CMAKE} -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=${IDE_CC} -DCMAKE_CXX_COMPILER=${IDE_CXX} -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../..</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
+        </preBuild>
+      </makefileType>
+      <item path="/usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+      </item>
+      <item path="build/Debug/src/cadMousePro-gui_autogen/EWIEGA46WW/moc_MouseMainWindow.cpp"
+            ex="true"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="build/Debug/src/cadMousePro-gui_autogen/S5VNLJ26FI/moc_Proxy.cpp"
+            ex="true"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="build/Debug/src/cadMousePro-gui_autogen/S5VNLJ26FI/moc_UPowerProxy.cpp"
+            ex="true"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="build/Debug/src/cadMousePro-gui_autogen/mocs_compilation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="build/Debug/src/generated-sources/Proxy.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="build/Debug/src/generated-sources/UPowerDeviceProxy.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="build/Debug/src/generated-sources/UPowerProxy.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="build/qt/src/cadMousePro-gui_autogen/mocs_compilation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="build/qt/src/generated-sources/Proxy.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <folder path="0/build/Debug">
+        <ccTool>
+          <incDir>
+            <pElem>build/Debug/src</pElem>
+            <pElem>src</pElem>
+            <pElem>build/Debug/src/cadMousePro-gui_autogen/include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtDBus</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>QT_CORE_LIB</Elem>
+            <Elem>QT_DBUS_LIB</Elem>
+            <Elem>QT_GUI_LIB</Elem>
+            <Elem>QT_WIDGETS_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/build/qt/src/cadMousePro-gui_autogen">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtDBus</pElem>
+            <pElem>build/qt/src/generated-sources</pElem>
+            <pElem>build/qt/src/cadMousePro-gui_autogen/S5VNLJ26FI</pElem>
+            <pElem>src</pElem>
+            <pElem>build/qt/src/cadMousePro-gui_autogen/EWIEGA46WW</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>build/qt/src/cadMousePro-gui_autogen</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>build/qt/src</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/build/qt/src/generated-sources">
+        <ccTool>
+          <incDir>
+            <pElem>build/qt/src/generated-sources</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtDBus</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>build/qt/src</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/src">
+        <ccTool>
+          <incDir>
+            <pElem>build/Debug/src</pElem>
+            <pElem>src</pElem>
+            <pElem>build/Debug/src/cadMousePro-gui_autogen/include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtDBus</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>QT_CORE_LIB</Elem>
+            <Elem>QT_DBUS_LIB</Elem>
+            <Elem>QT_GUI_LIB</Elem>
+            <Elem>QT_WIDGETS_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="Modules">
+        <ccTool>
+          <incDir>
+            <pElem>build/Debug/src</pElem>
+            <pElem>src</pElem>
+            <pElem>build/Debug/src/cadMousePro-gui_autogen/include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtDBus</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>QT_CORE_LIB</Elem>
+            <Elem>QT_DBUS_LIB</Elem>
+            <Elem>QT_GUI_LIB</Elem>
+            <Elem>QT_WIDGETS_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="cadMousePro-gui_autogen">
+        <ccTool>
+          <incDir>
+            <pElem>build/Debug/src</pElem>
+            <pElem>src</pElem>
+            <pElem>build/Debug/src/cadMousePro-gui_autogen/include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtDBus</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>QT_CORE_LIB</Elem>
+            <Elem>QT_DBUS_LIB</Elem>
+            <Elem>QT_GUI_LIB</Elem>
+            <Elem>QT_WIDGETS_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <item path="src/MouseMainWindow.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cadMouseProGUI.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+    </conf>
+    <conf name="Release" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>build/Release</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>build/Release/src/cadMousePro-gui</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>src</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>NDEBUG</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>build/Release</preBuildCommandWorkingDir>
+          <preBuildCommand>${CMAKE} -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=${IDE_CC} -DCMAKE_CXX_COMPILER=${IDE_CXX} -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../..</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
+        </preBuild>
+      </makefileType>
+      <item path="src/MouseMainWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MouseMainWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
