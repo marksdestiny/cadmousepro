@@ -35,6 +35,10 @@ void Daemon::configure(bool liftOffDetection, bool smartScrolling, bool remapWhe
 
 void Daemon::sendFeatureReport()
 {
-    std::wcout << L"sending feature report " << std::endl;
-    getMouse().sendFeatureReport(data);
+    try {
+        std::wcout << L"sending feature report " << std::endl;
+        getMouse().sendFeatureReport(data);
+    } catch (HIDException& e) {
+        logException(e);
+    }
 }
