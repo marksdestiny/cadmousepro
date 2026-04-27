@@ -1,6 +1,9 @@
 IMAGE_NAME := cadmousepro-dev
 CONTAINER_WORKDIR := /workspace
 
+UID := $(shell id -u)
+GID := $(shell id -g)
+
 .PHONY: image build build-daemon build-gui rebuild clean shell
 
 image:
@@ -8,6 +11,7 @@ image:
 
 build-daemon:
 	docker run --rm \
+		-u $(UID):$(GID) \
 		-v "$(PWD):$(CONTAINER_WORKDIR)" \
 		-w $(CONTAINER_WORKDIR) \
 		$(IMAGE_NAME) \
@@ -15,6 +19,7 @@ build-daemon:
 
 build-gui:
 	docker run --rm \
+		-u $(UID):$(GID) \
 		-v "$(PWD):$(CONTAINER_WORKDIR)" \
 		-w $(CONTAINER_WORKDIR) \
 		$(IMAGE_NAME) \
@@ -30,6 +35,7 @@ clean:
 
 shell:
 	docker run --rm -it \
+		-u $(UID):$(GID) \
 		-v "$(PWD):$(CONTAINER_WORKDIR)" \
 		-w $(CONTAINER_WORKDIR) \
 		$(IMAGE_NAME)
