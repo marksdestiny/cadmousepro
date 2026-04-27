@@ -1,4 +1,4 @@
-set(EXECUTABLE_FILE "cadMousePro-gui")
+set(EXECUTABLE_FILE "cadmousepro-gui")
 
 # Qt libraries:
 set(CMAKE_INCLUDE_CURRENT_DIR ON) # Find includes in corresponding build directories
