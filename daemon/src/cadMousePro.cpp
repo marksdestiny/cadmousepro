@@ -27,7 +27,7 @@
 #include "Daemon.h"
 #include "generated-sources/DBusAdaptor.h"
 
-#define APP_NAME L"cadMousePro"
+#define APP_NAME L"cadmousepro"
 
 int main(int argc, char** argv) {
 	try {
