@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
 			std::wcout << L"    --lift-off-detection BOOL   Enable or disabe lift off detection." << std::endl;
 			std::wcout << L"    --remap-wheel-press BOOL    " << std::endl;
 			std::wcout << L"    --remap-gesture-button BOOL " << std::endl;
-			std::wcout << L"    --daemon BOOL               Periodically send feature requests to the mouse." << std::endl;
+			std::wcout << L"    --daemon                    Periodically send feature requests to the mouse." << std::endl;
 
 			return CLI::EXIT_CODE_SUCCESS;
 

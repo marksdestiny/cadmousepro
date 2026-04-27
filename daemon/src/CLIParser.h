@@ -71,7 +71,7 @@ public:
 			} else if (option == OPTION_REMAP_GESTURE_BUTTON) {
 				c.cadMouseConfig.setRemapGestureButton(parseBoolean(readNext(arguments, i)));
 			} else if (option == OPTION_DAEMON) {
-				c.daemon = parseBoolean(readNext(arguments, i));
+				c.daemon = true;
 			} else if (option == OPTION_HELP) {
 				c.help = true;
 			} else throw CLIException(L"Unsupported CLI option: " + option, CLI::EXIT_CODE_BAD_CLI_ARGUMENTS);
