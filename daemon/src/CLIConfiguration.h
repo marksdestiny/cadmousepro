@@ -23,6 +23,7 @@ public:
 
 	bool daemon = false;
 	bool help = false;
+	bool version = false;
 	
 	CadMouseConfig cadMouseConfig;
 
