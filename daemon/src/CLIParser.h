@@ -52,6 +52,7 @@ public:
 	static const std::wstring OPTION_REMAP_WHEEL_PRESS;
 	static const std::wstring OPTION_REMAP_GESTURE_BUTTON;
 	static const std::wstring OPTION_DAEMON;
+	static const std::wstring OPTION_HELP;
 
 	CLIConfiguration parse(const std::vector<std::wstring>& arguments) {
 		CLIConfiguration c;
@@ -71,6 +72,8 @@ public:
 				c.cadMouseConfig.setRemapGestureButton(parseBoolean(readNext(arguments, i)));
 			} else if (option == OPTION_DAEMON) {
 				c.daemon = parseBoolean(readNext(arguments, i));
+			} else if (option == OPTION_HELP) {
+				c.help = true;
 			} else throw CLIException(L"Unsupported CLI option: " + option, CLI::EXIT_CODE_BAD_CLI_ARGUMENTS);
 		}
 
@@ -88,3 +91,4 @@ const std::wstring CLIParser::OPTION_LIFT_OFF_DETECTION = L"--lift-off-detection
 const std::wstring CLIParser::OPTION_REMAP_WHEEL_PRESS = L"--remap-wheel-press";
 const std::wstring CLIParser::OPTION_REMAP_GESTURE_BUTTON = L"--remap-gesture-button";
 const std::wstring CLIParser::OPTION_DAEMON = L"--daemon";
+const std::wstring CLIParser::OPTION_HELP = L"--help";

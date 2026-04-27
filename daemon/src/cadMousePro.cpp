@@ -27,16 +27,37 @@
 #include "Daemon.h"
 #include "generated-sources/DBusAdaptor.h"
 
+#define APP_NAME L"cadMousePro"
+
 int main(int argc, char** argv) {
 	try {
 		CLI cli(argc, argv);
 
-		std::wcout << L"cadMousePro" << std::endl;
-
+		std::wcout << APP_NAME << std::endl;
+		
 		CLIParser cliParser;
 		CLIConfiguration configuration = cliParser.parse(cli.arguments());
 
-		if (configuration.daemon) {
+		if (configuration.help) {
+			std::wcout << L"Usage:" << std::endl;
+			std::wcout << L"    " << APP_NAME << L" [OPTIONS]" << std::endl;
+			std::wcout << std::endl;
+			std::wcout << L"Description:" << std::endl;
+			std::wcout << L"    Configure the 3Dconnextion CadMouse Pro. Use --daemon to allow the usage of " << std::endl;
+			std::wcout << L"    the mouse over cable." << std::endl;
+			std::wcout << std::endl;
+			std::wcout << L"Options:" << std::endl;
+			std::wcout << L"    --help                      Show this help message and exit." << std::endl;
+			std::wcout << L"    --frequency NUM             The polling frequency in Hz (125, 125, 250, 500 or 1000)." << std::endl;
+			std::wcout << L"    --smart-scrolling BOOL      Enable or disable smart scrolling." << std::endl;
+			std::wcout << L"    --lift-off-detection BOOL   Enable or disabe lift off detection." << std::endl;
+			std::wcout << L"    --remap-wheel-press BOOL    " << std::endl;
+			std::wcout << L"    --remap-gesture-button BOOL " << std::endl;
+			std::wcout << L"    --daemon BOOL               Periodically send feature requests to the mouse." << std::endl;
+
+			return CLI::EXIT_CODE_SUCCESS;
+
+		} else if (configuration.daemon) {
 			// TODO: run D-Bus service
 			std::wcout << L"will start daemon" << std::endl;
 			std::wcout << L"uid = " << getuid() << std::endl;

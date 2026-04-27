@@ -22,6 +22,7 @@ class CLIConfiguration {
 public:
 
 	bool daemon = false;
+	bool help = false;
 	
 	CadMouseConfig cadMouseConfig;
 
